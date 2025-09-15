@@ -11,7 +11,7 @@ import { GiMeal } from "react-icons/gi";
 const Navbar = () => {
   const { sidebar, setSidebar } = useContext(ShopContext)
   return (
-    <nav className='w-full h-16 flex flex-row items-center justify-around fixed top-0 border-b-2 z-40'>
+    <nav className='w-full h-16 flex flex-row items-center justify-around fixed top-0 border-b-2 z-40 bg-white'>
       <a href="/" className='text-3xl font-semibold flex flex-row h-16 items-center justify-center gap-3'> <span className='text-red-500'><GiMeal /></span> Flavor</a>
       <div className='w-auto h-16 hidden md:flex flex-row items-center justify-center gap-2 font-semibold'>
         <Link to='/specail' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-red-700'>Special</Link>

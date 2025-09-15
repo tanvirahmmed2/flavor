@@ -12,7 +12,7 @@ const SideBar = () => {
       <div className='w-auto h-auto flex flex-col items-start justify-start gap-4'>
 
         <a href="/" className='text-3xl font-semibold flex flex-row h-16 items-center justify-center gap-3'> <span className='text-red-500'><GiMeal /></span> Flavor</a>
-        <Link to='/specail'  className='px-4 hover:px-6 '>Special</Link>
+        <Link to='/special'  className='px-4 hover:px-6 '>Special</Link>
         <Link to='/offers'   className='px-4 hover:px-6 '>Offers</Link>
         <Link to='/about'    className='px-4 hover:px-6 '>About us</Link>
         <Link to='/location' className='px-4 hover:px-6 '>Loaction</Link>
