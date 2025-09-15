@@ -23,7 +23,7 @@ const Navbar = () => {
 
       <div className=' w-auto h-16 flex flex-row items-center justify-center gap-4 font-semibold'>
         <p className='text-2xl px-3 cursor-pointer'><CiShoppingCart /></p>
-        <p className={` text-xl block md:hidden cursor-pointer`} onClick={() => setSidebar(!sidebar)}><FaBars /></p>
+        <p className={` text-xl  cursor-pointer`} onClick={() => setSidebar(!sidebar)}><FaBars /></p>
       </div>
 
     </nav>
