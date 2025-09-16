@@ -16,6 +16,7 @@ const SideBar = () => {
         <Link to='/offers'   className='px-4 hover:px-6 '>Offers</Link>
         <Link to='/about'    className='px-4 hover:px-6 '>About us</Link>
         <Link to='/location' className='px-4 hover:px-6 '>Loaction</Link>
+        <Link to='/gallery' className='px-4 hover:px-6 '>Gallery</Link>
         <Link to='/saved' className='px-4 hover:px-6 '>Saved</Link>
         <Link to='/cart' className='px-4     hover:px-6 '> Cart</Link>
 

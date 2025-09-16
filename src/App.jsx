@@ -7,6 +7,8 @@ import SideBar from './layout/SideBar'
 import Reviews from './pages/Reviews'
 import Gallery from './pages/Gallery'
 import Food from './components/Food'
+import Cart from './pages/Cart'
+import Special from './pages/Special'
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
           <Route path='/reviews' element={<Reviews />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/foods/:name' element={<Food />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/special' element={<Special />} />
         </Routes>
 
       </div>

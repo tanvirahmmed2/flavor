@@ -3,43 +3,67 @@ import { ShopContext } from './Context'
 import { useParams } from 'react-router-dom'
 
 const Food = () => {
-    const { name } = useParams()
-    const { foodItems } = useContext(ShopContext)
-    const food = foodItems.find((food) => food.name === name)
+  const { name } = useParams()
+  const { foodItems } = useContext(ShopContext)
+  const food = foodItems.find((item) => item.name === name)
+
+  if (!food) {
     return (
-        <section className='w-3/4 border-2 border-black/30 rounded-md h-full flex flex-col md:flex-row items-center justify-center gap-6 p-4'>
-            <div className='w-full flex flex-col items-center justify-center gap-4'>
-                <img src={food.image} alt="" className='rounded-md' />
-                <p>{food.name}</p>
-            </div>
-            <div className='w-full flex flex-col items-start justify-start gap-2'>
-                <p className='px-4 p-1 bg-green-500 text-white rounded-2xl'>{food.category}</p>
-                <h1 className='text-3xl font-semibold'>{food.name}</h1>
-                <p>{food.description}</p>
-
-                <p className='italic'>⭐Rating: {food.rating}/5</p>
-                <div className='flex flex-row gap-6'>
-                    <p>Old Price: ${food.old_price}</p>
-                    <p>New Price: ${food.new_price}</p>
-                </div>
-                <p>Quantity:
-                    <select name="" id="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </p>
-                <div className='w-auto flex flex-row gap-4'>
-                    <button className='px-4 p-1 bg-blue-100 rounded-md'>save</button>
-                    <button className='px-4 p-1 bg-red-500 text-white rounded-md'>Add to cart</button>
-                </div>
-
-
-            </div>
-
-        </section>
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <p className="text-lg text-gray-500">Food item not found 😢</p>
+      </div>
     )
+  }
+
+  return (
+    <section className="w-11/12 md:w-3/4 mx-auto my-10 border border-gray-200 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-center gap-8 p-6 bg-white">
+      
+      {/* Food image */}
+      <div className="w-full md:w-1/2 flex flex-col items-center justify-center gap-4">
+        <img
+          src={food.image}
+          alt={food.name}
+          className="rounded-lg shadow-md object-cover w-full max-h-[400px]"
+        />
+      </div>
+
+      {/* Food details */}
+      <div className="w-full md:w-1/2 flex flex-col items-start gap-4">
+        <span className="px-4 py-1 text-sm font-medium bg-green-500 text-white rounded-full">
+          {food.category}
+        </span>
+
+        <h1 className="text-3xl font-semibold text-gray-800">{food.name}</h1>
+        <p className="text-gray-600">{food.description}</p>
+
+        <p className="italic text-yellow-600">⭐ Rating: {food.rating}/5</p>
+
+        <div className="flex items-center gap-6">
+          <p className="line-through text-gray-400 text-lg">${food.old_price}</p>
+          <p className="text-2xl text-red-600 font-bold">${food.new_price}</p>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <label className="font-medium text-gray-700">Quantity:</label>
+          <select className="border rounded-md px-2 py-1">
+            {[1, 2, 3, 4].map((q) => (
+              <option key={q} value={q}>{q}</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="flex gap-4 mt-2">
+          <button className="px-4 py-2 border border-blue-300 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition">
+            Save
+          </button>
+          <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md shadow-md transition">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+
+    </section>
+  )
 }
 
 export default Food
