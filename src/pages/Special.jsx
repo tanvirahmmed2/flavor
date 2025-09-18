@@ -13,10 +13,10 @@ const Special = () => {
                 selectedItems.map((food)=>{
                     const {name, id, image}= food
                     return(
-                        <div key={id} className='w-[400px] h-auto m-12 md:m-0 flex flex-col items-center justify-center gap-2'>
-                            <img src={image} alt=""  className='w-full h-[300px] object-cover rounded-md'/>
+                        <div key={id} className='w-[400px] h-auto m-12 md:m-0 flex flex-col  items-center justify-center gap-2'>
+                            <img src={image} alt=""  className='w-full h-[300px] object-cover shadow-md shadow-black/30 rounded-xl'/>
                             
-                            <Link to={`/foods/${name}`} className='w-full text-center text-lg font-semibold'>{name}</Link>
+                            <Link to={`/foods/${name}`} className='w-full text-center text-xl font-semibold'>{name}</Link>
                         </div>
                     )
                 })
