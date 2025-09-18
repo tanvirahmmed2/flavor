@@ -16,7 +16,7 @@ const App = () => {
     <div className='w-full overflow-x-hidden relative'>
       <Navbar />
       <SideBar/>
-      <div className='w-full min-h-screen mt-20 flex items-center flex-col justify-center'>
+      <div className='w-full min-h-screen mt-20 flex items-center flex-col justify-center py-10'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='menu/*' element={<Menu />} />
