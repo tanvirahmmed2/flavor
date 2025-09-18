@@ -8,7 +8,7 @@ const CategoryFood = () => {
     const { foodItems } = useContext(ShopContext)
     const selectedFood = foodItems.filter((food) => food.category === category)
     return (
-        <div className='w-full flex flex-col items-center justify-start'>
+        <div className='w-full flex flex-col items-center justify-start gap-6'>
             <h1 className='text-2xl font-semibold'>{category}</h1>
             <div className='w-full flex flex-wrap justify-center gap-4'>
                 {
