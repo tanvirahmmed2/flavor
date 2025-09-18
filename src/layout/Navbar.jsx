@@ -12,12 +12,12 @@ const Navbar = () => {
   const { sidebar, setSidebar } = useContext(ShopContext)
   return (
     <nav className='w-full h-16 flex flex-row items-center justify-around fixed top-0 border-b-2 z-40 bg-white'>
-      <a href="/" className='text-3xl font-semibold flex flex-row h-16 items-center justify-center gap-3'> <span className='text-red-500'><GiMeal /></span> Flavor</a>
+      <a href="/" className='text-3xl font-semibold flex flex-row h-16 items-center justify-center gap-3'> <span className='text-orange-500'><GiMeal /></span> Flavor</a>
       <div className='w-auto h-16 hidden md:flex flex-row items-center justify-center gap-2 font-semibold'>
-        <Link to='/menu' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-red-700'>Menu</Link>
-        <Link to='/offers' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-red-700'>Offers</Link>
-        <Link to='/about' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-red-700'>About us</Link>
-        <Link to='/location' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-red-700'>Loaction</Link>
+        <Link to='/menu' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-orange-700'>Menu</Link>
+        <Link to='/offers' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-orange-700'>Offers</Link>
+        <Link to='/about' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-orange-700'>About us</Link>
+        <Link to='/location' className='px-4 hover:border-b-2  h-16 flex items-center justify-center border-orange-700'>Loaction</Link>
 
       </div>
 

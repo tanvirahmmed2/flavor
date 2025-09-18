@@ -16,8 +16,8 @@ const Menu = () => {
                         to={`/menu/${cat}`}
                         className={({ isActive }) =>
                             `p-2 sm:px-2 md:px-8 rounded-md border-2 transition duration-300 ${isActive
-                                ? 'bg-red-200 border-red-200'
-                                : 'hover:bg-red-200 hover:border-red-200'
+                                ? 'bg-orange-400 border-orange-400'
+                                : 'hover:bg-orange-400 hover:border-orange-400'
                             }`
                         }
                     >

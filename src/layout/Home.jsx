@@ -4,7 +4,8 @@ import Special from '../pages/Special'
 
 const Home = () => {
   return (
-    <div>
+    <div className='w-full flex flex-col items-center justify-center gap-12'>
+      
       <Intro/>
       <Special/>
     </div>

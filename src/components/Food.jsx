@@ -40,7 +40,7 @@ const Food = () => {
 
         <div className="flex items-center gap-6">
           <p className="line-through text-gray-400 text-lg">${food.old_price}</p>
-          <p className="text-2xl text-red-600 font-bold">${food.new_price}</p>
+          <p className="text-2xl text-orange-600 font-bold">${food.new_price}</p>
         </div>
 
         
@@ -49,7 +49,7 @@ const Food = () => {
           <button className="px-4 py-2 border border-blue-300 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition">
             Save
           </button>
-          <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md shadow-md transition" onClick={() => addToCart(food.id)}>
+          <button className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md shadow-md transition" onClick={() => addToCart(food.id)}>
             Add to Cart
           </button>
         </div>

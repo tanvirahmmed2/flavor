@@ -14,13 +14,13 @@ const CategoryFood = () => {
                 {
                     selectedFood.map((food) => {
                         const { name, image, id, old_price, new_price } = food
-                        return <div key={id} className='w-[240px] relative group h-[300px] shadow-md shadow-black/20 overflow-hidden flex flex-col items-center justify-center rounded-md'>
+                        return <div key={id} className='w-[240px] relative group h-[300px] shadow-sm shadow-orange-300 overflow-hidden flex flex-col items-center justify-center rounded-md'>
                             <img src={image} alt="" className='w-[240px] h-[300px] object-cover' />
                             <div className='absolute bg-white w-full h-auto flex opacity-70 group-hover:opacity-100 transition duration-500 flex-col items-center justify-center bottom-0 py-2'>
                                 <Link to={`/foods/${name}`} className='w-full text-center text-xl font-semibold'>{name}</Link>
                                 <div className='w-full flex flex-row items-center justify-between p-2'>
                                     <p>Price: </p>
-                                    <p className='text-xs line-through text-red-600'>${old_price}</p>
+                                    <p className=' line-through text-orange-600'>${old_price}</p>
                                     <p className='text-xl'>${new_price}</p>
                                 </div>
                             </div>
