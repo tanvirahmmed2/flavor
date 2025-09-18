@@ -10,6 +10,10 @@ const CategoryFood = () => {
     return (
         <div className='w-full flex flex-col items-center justify-start gap-6'>
             <h1 className='text-2xl font-semibold'>{category}</h1>
+            <div className='w-full relative'>
+                <img src={selectedFood[1].image} alt="" className='w-full h-[300px] object-cover opacity-30' />
+                <p className='text-2xl font-bold w-full text-center absolute top-1/2 text-red-500 bg-white p-2'> Select your favourite {category} item</p>
+            </div>
             <div className='w-full flex flex-wrap justify-center gap-4'>
                 {
                     selectedFood.map((food) => {
