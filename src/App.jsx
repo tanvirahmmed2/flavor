@@ -5,6 +5,7 @@ import Footer from './layout/Footer'
 import Home from './layout/Home'
 import SideBar from './layout/SideBar'
 import Gallery from './pages/Gallery'
+import Cart from './pages/Cart'
 import Food from './components/Food'
 import Menu from './pages/Menu'
 
@@ -18,6 +19,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
+            <Route path='/order' element={<Cart/>} />
             <Route path='/menu' element={<Menu/>} />
             <Route path='/menu/:name' element={<Food/>} />
           </Routes>
