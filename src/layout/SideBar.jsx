@@ -23,6 +23,7 @@ const SideBar = () => {
           <Link to='/gallery' className='px-4 hover:scale-105 '>Gallery</Link>
           <Link to='/about' className='px-4 hover:scale-105 '>About</Link>
           <Link to='/contact' className='px-4 hover:scale-105 '>Contact</Link>
+          <Link to='/saved' className='px-4 hover:scale-105 '>Saved</Link>
         </div>
 
       </div>
