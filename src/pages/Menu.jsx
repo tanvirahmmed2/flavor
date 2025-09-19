@@ -7,6 +7,7 @@ const Menu = () => {
     const { foodItems } = useContext(ShopContext)
 
     const selectedItems = foodItems.filter((food) => food.category === menuItem)
+
     return (
         <div className='w-full flex flex-col items-center justify-center gap-4'>
             <h1 className='text-xl font-semibold text-center'>Grab your favourite Foods</h1>
@@ -17,6 +18,11 @@ const Menu = () => {
                 <button onClick={() => setMenuItem("Salads")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Salads" ? "bg-orange-500" : "bg-gray-300"}`} >Salads</button>
                 <button onClick={() => setMenuItem("Drinks")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Drinks" ? "bg-orange-500" : "bg-gray-300"}`} >Drinks</button>
                 <button onClick={() => setMenuItem("Desserts")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Desserts" ? "bg-orange-500" : "bg-gray-300"}`} >Desserts</button>
+            </div>
+            <div className='w-full relative h-[200px] p-6'>
+                <img src={selectedItems[1].image} alt="" className='w-full h-full object-cover opacity-20'/>
+                <p className='w-full text-center absolute top-1/2 text-xl font-bold text-orange-400'>Select most favourite {menuItem}</p>
+
             </div>
             <div className='w-full flex flex-wrap justify-center gap-2 p-2'>
                 {
