@@ -10,7 +10,7 @@ import Menu from './pages/Menu'
 
 const App = () => {
   return (
-    <div className='w-full px-0 md:px-12'>
+    <div className='w-full '>
       <div className='w-full '>
         <Navbar />
         <SideBar />

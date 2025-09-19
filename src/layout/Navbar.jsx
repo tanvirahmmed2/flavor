@@ -12,7 +12,7 @@ const Navbar = () => {
   const { sidebar, setSidebar } = useContext(ShopContext)
 
   return (
-    <nav className='w-full h-16  border-opacity-65 rounded-md flex flex-row items-center justify-around'>
+    <nav className='w-full h-16 fixed top-0 border-opacity-65 rounded-md flex flex-row items-center justify-around backdrop-blur-md'>
       <div>
         <a href="/" className='text-2xl font-semibold flex flex-row items-center justify-center gap-2 '><span className='text-orange-500 text-2xl'><MdFoodBank /></span> Flavor</a>
       </div>
