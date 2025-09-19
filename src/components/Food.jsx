@@ -18,7 +18,7 @@ const Food = () => {
   return (
     <section className="w-11/12 md:w-3/4 mx-auto my-10 border border-gray-200 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-center gap-8 p-6 bg-white">
       
-      {/* Food image */}
+      
       <div className="w-full md:w-1/2 flex flex-col items-center justify-center gap-4">
         <img
           src={food.image}
@@ -27,7 +27,7 @@ const Food = () => {
         />
       </div>
 
-      {/* Food details */}
+      
       <div className="w-full md:w-1/2 flex flex-col items-start gap-4">
         <span className="px-4 py-1 text-sm font-medium bg-green-500 text-white rounded-full">
           {food.category}

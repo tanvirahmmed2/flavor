@@ -13,7 +13,7 @@ import Contact from './pages/Contact'
 
 const App = () => {
   return (
-    <div className='w-full '>
+    <div className='w-full overflow-x-hidden'>
       <div className='w-full '>
         <Navbar />
         <SideBar />
