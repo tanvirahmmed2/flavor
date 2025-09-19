@@ -19,7 +19,7 @@ const SideBar = () => {
           <Link to='/menu' className='px-4 hover:scale-105 '>Menu</Link>
           <Link to='/order' className='px-4 hover:scale-105 '>Order</Link>
           <Link to='/reserve' className='px-4 hover:scale-105 '>Reserve</Link>
-          <Link to='/branches' className='px-4 hover:scale-105 '>Branches</Link>
+          <Link to='/contact' className='px-4 hover:scale-105 '>Contact</Link>
           <Link to='/gallery' className='px-4 hover:scale-105 '>Gallery</Link>
           <Link to='/about' className='px-4 hover:scale-105 '>About</Link>
           <Link to='/contact' className='px-4 hover:scale-105 '>Contact</Link>

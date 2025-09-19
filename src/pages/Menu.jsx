@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ShopContext } from '../components/Context'
 
 const Menu = () => {
-    const [menuItem, setMenuItem] = useState("Desserts")
+    const [menuItem, setMenuItem] = useState("Burgers")
     const { foodItems } = useContext(ShopContext)
 
     const selectedItems = foodItems.filter((food) => food.category === menuItem)

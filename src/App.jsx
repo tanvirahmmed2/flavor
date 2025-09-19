@@ -8,6 +8,8 @@ import Gallery from './pages/Gallery'
 import Cart from './pages/Cart'
 import Food from './components/Food'
 import Menu from './pages/Menu'
+import Reserve from './pages/Reserve'
+import Contact from './pages/Contact'
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
             <Route path='/order' element={<Cart/>} />
+            <Route path='/reserve' element={<Reserve/>} />
+            <Route path='/contact' element={<Contact/>} />
             <Route path='/menu' element={<Menu/>} />
             <Route path='/menu/:name' element={<Food/>} />
           </Routes>
