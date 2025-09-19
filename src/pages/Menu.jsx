@@ -22,11 +22,11 @@ const Menu = () => {
                 {
                     selectedItems.map((food) => {
                         const { name, id, image, new_price } = food
-                        return <div key={id} className='sm:w-[200px] lg:w-[300px] w-full h-[220px] lg:[250px] rounded-md overflow-hidden'>
+                        return <div key={id} className='sm:w-[200px] lg:w-[300px] relative w-full h-[220px] lg:[250px] rounded-md overflow-hidden group'>
                             <img src={image} alt=""  className='w-full h-full object-cover'/>
-                            <div>
+                            <div className='w-full  flex-row items-center justify-around absolute bottom-0 bg-white p-1 hidden group-hover:flex'>
                                 <p>Price: {new_price}</p>
-                                <Link to={`/menu/${name}`}>{name}</Link>
+                                <Link to={`/menu/${name}`} className='font-semibold text-orange-400'>{name}</Link>
                             </div>
                         </div>
                     })
