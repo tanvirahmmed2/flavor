@@ -20,6 +20,7 @@ const Navbar = () => {
 
         <Link className='px-4 h-full hover:border-b-2 border-orange-400 flex items-center justify-center' to='/' >Home</Link>
         <Link className='px-4 h-full hover:border-b-2 border-orange-400 flex items-center justify-center' to='/menu' >Menu</Link>
+        <Link className='px-4 h-full hover:border-b-2 border-orange-400 flex items-center justify-center' to='/gallery' >Gallery</Link>
         <Link className='px-4 h-full hover:border-b-2 border-orange-400 flex items-center justify-center' to='/order' >Order</Link>
       </div>
 

@@ -4,6 +4,8 @@ import Navbar from './layout/Navbar'
 import Footer from './layout/Footer'
 import Home from './layout/Home'
 import SideBar from './layout/SideBar'
+import Gallery from './pages/Gallery'
+import Food from './components/Food'
 
 const App = () => {
   return (
@@ -11,9 +13,11 @@ const App = () => {
       <div className='w-full '>
         <Navbar />
         <SideBar />
-        <div className='w-full min-h-screen flex items-center justify-center py-12'>
+        <div className='w-full min-h-[80vh] flex items-center justify-center my-16'>
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/gallery' element={<Gallery/>} />
+            <Route path='/menu/:name' element={<Food/>} />
           </Routes>
         </div>
         <Footer />
