@@ -11,7 +11,7 @@ const Reserve = () => {
       </p>
 
       <form className="w-full md:w-3/4 lg:w-1/2 bg-white shadow-md rounded-xl p-8 space-y-6">
-        {/* Name & Phone */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col">
             <label htmlFor="name" className="mb-1 text-sm font-medium text-gray-700">
@@ -42,7 +42,6 @@ const Reserve = () => {
           </div>
         </div>
 
-        {/* Date & Guests */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex flex-col">
             <label htmlFor="date" className="mb-1 text-sm font-medium text-gray-700">
@@ -70,12 +69,13 @@ const Reserve = () => {
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
-              <option value="5+">5+</option>
+              <option value="5+">5</option>
+              <option value="6">6+</option>
             </select>
           </div>
         </div>
 
-        {/* Occasion */}
+
         <div className="flex flex-col">
           <label htmlFor="occasion" className="mb-1 text-sm font-medium text-gray-700">
             Occasion (optional)
