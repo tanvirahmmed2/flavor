@@ -6,6 +6,7 @@ import Home from './layout/Home'
 import SideBar from './layout/SideBar'
 import Gallery from './pages/Gallery'
 import Food from './components/Food'
+import Menu from './pages/Menu'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
+            <Route path='/menu' element={<Menu/>} />
             <Route path='/menu/:name' element={<Food/>} />
           </Routes>
         </div>
