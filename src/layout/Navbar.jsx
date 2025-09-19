@@ -16,7 +16,7 @@ const Navbar = () => {
       <div>
         <a href="/" className='text-2xl font-semibold flex flex-row items-center justify-center gap-2 '><span className='text-orange-500 text-2xl'><MdFoodBank /></span> Flavor</a>
       </div>
-      <div className='w-auto h-16 flex flex-row items-center justify-center gap-2'>
+      <div className='w-auto h-16 hidden md:flex flex-row items-center justify-center gap-2'>
 
         <Link className='px-4 h-full hover:border-b-2 border-orange-400 flex items-center justify-center' to='/' >Home</Link>
         <Link className='px-4 h-full hover:border-b-2 border-orange-400 flex items-center justify-center' to='/menu' >Menu</Link>
