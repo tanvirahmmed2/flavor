@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 
 const Food = () => {
   const { name } = useParams()
-  const { foodItems, addToCart } = useContext(ShopContext)
+  const { foodItems, addToCart, addToSave } = useContext(ShopContext)
   const food = foodItems.find((item) => item.name === name)
 
   if (!food) {
@@ -46,7 +46,7 @@ const Food = () => {
         
 
         <div className="flex gap-4 mt-2">
-          <button className="px-4 py-2 border border-blue-300 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition">
+          <button className="px-4 py-2 border border-blue-300 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition" onClick={() => addToSave(food.id)}>
             Save
           </button>
           <button className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md shadow-md transition" onClick={() => addToCart(food.id)}>
