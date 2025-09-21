@@ -63,11 +63,7 @@ export const ContextProvider = ({ children }) => {
             const existItem = prev.find((data) => data.id === numericId);
 
             if (existItem) {
-                return prev.map((item) =>
-                    item.id === numericId
-                        ? { ...item, quantity: item.quantity + 1 }
-                        : item
-                );
+                alert('Item already saved')
             } else {
                 const selectedItem = foodItems.find((item) => item.id === numericId);
                 if (selectedItem) {
