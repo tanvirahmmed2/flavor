@@ -20,7 +20,7 @@ const Menu = () => {
                 <button onClick={() => setMenuItem("Desserts")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Desserts" ? "bg-orange-500" : "bg-gray-300"}`} >Desserts</button>
             </div>
             <p className='text-2xl font-semibold text-center'>Select your most favourite {menuItem}</p>
-            <div className='w-full flex flex-wrap justify-center gap-2 p-2'>
+            <div className='w-full flex flex-wrap justify-center gap-4 md:gap-2 p-4'>
                 {
                     selectedItems.map((food) => {
                         const { name, id, image, new_price } = food

@@ -27,6 +27,7 @@ const SideBar = () => {
           <Link to='/about' className='px-4 hover:scale-105 ' onClick={hideBar}>About</Link>
           <Link to='/contact' className='px-4 hover:scale-105 ' onClick={hideBar}>Contact</Link>
           <Link to='/saved' className='px-4 hover:scale-105 ' onClick={hideBar}>Saved</Link>
+          <Link to='/review' className='px-4 hover:scale-105 ' onClick={hideBar}>Review</Link>
         </div>
 
       </div>
