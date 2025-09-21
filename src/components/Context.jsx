@@ -45,6 +45,17 @@ export const ContextProvider = ({ children }) => {
         );
     };
 
+    const getTotalAmount = () => {
+        let totalAmount = 0;
+
+        for (const item of cartItem) {
+            totalAmount += item.new_price * item.quantity;
+        }
+
+        return totalAmount;
+    };
+
+
 
     const addToSave = (id) => {
         const numericId = Number(id);
@@ -90,6 +101,7 @@ export const ContextProvider = ({ children }) => {
         addToCart, removeFromCart,
         savedItem, setSavedItem,
         addToSave, removeFromSave,
+        getTotalAmount,
     };
 
     return (
