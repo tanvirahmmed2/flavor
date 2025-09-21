@@ -10,6 +10,7 @@ import Food from './components/Food'
 import Menu from './pages/Menu'
 import Reserve from './pages/Reserve'
 import Contact from './pages/Contact'
+import Saved from './pages/Saved'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
             <Route path='/order' element={<Cart/>} />
+            <Route path='saved' element={<Saved/>} />
             <Route path='/reserve' element={<Reserve/>} />
             <Route path='/contact' element={<Contact/>} />
             <Route path='/menu' element={<Menu/>} />
