@@ -11,6 +11,8 @@ import Menu from './pages/Menu'
 import Reserve from './pages/Reserve'
 import Contact from './pages/Contact'
 import Saved from './pages/Saved'
+import Review from './pages/Review'
+import Error from './pages/Error'
 
 const App = () => {
   return (
@@ -18,7 +20,7 @@ const App = () => {
       <div className='w-full '>
         <Navbar />
         <SideBar />
-        <div className='w-full min-h-[80vh] flex items-center justify-center my-16'>
+        <div className='w-full min-h-[80vh] flex items-center justify-center my-20'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
@@ -28,6 +30,8 @@ const App = () => {
             <Route path='/contact' element={<Contact/>} />
             <Route path='/menu' element={<Menu/>} />
             <Route path='/menu/:name' element={<Food/>} />
+            <Route path='/review' element={<Review/>} />
+            <Route path='/*' element={<Error/>} />
           </Routes>
         </div>
         <Footer />
