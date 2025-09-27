@@ -22,13 +22,13 @@ const Intro = () => {
   return (
     <section
       style={{ backgroundImage: bgImage, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      className="w-full relative h-[400px] rounded-md overflow-hidden flex flex-col items-center justify-center gap-4"
+      className="w-full relative h-[500px] rounded-md overflow-hidden flex flex-col items-center justify-center gap-4"
     > 
       <h1 className="text-3xl font-bold text-white drop-shadow-md">
         Enjoy your meal with <span className="text-green-400">Flavor</span>
       </h1>
 
-      <div className="w-full flex flex-row items-center justify-center gap-4 px-12">
+      <div className="w-full flex flex-col md:flex-row items-center justify-center gap-4 px-12">
         <button className="w-full bg-white text-center font-semibold rounded-md py-2 hover:bg-gray-100 transition">
           Dine in
         </button>
