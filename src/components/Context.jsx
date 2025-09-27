@@ -9,6 +9,8 @@ export const ContextProvider = ({ children }) => {
     const [foodItems, setFoodItems] = useState(foods);
     const [cartItem, setCartItem] = useState([]);
     const [savedItem, setSavedItem] = useState([])
+    const [user, setUser]= useState(null)
+    const [isLoggedIn, setIsLoggedIn]= useState(false)
 
 
 
@@ -98,6 +100,8 @@ export const ContextProvider = ({ children }) => {
         savedItem, setSavedItem,
         addToSave, removeFromSave,
         getTotalAmount,
+        isLoggedIn, setIsLoggedIn,
+        user, setUser,
     };
 
     return (

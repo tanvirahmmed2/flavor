@@ -2,7 +2,7 @@ import React from 'react'
 
 const Reserve = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center py-12 px-4">
+    <div className="w-full flex flex-col items-center justify-center py-12 ">
       <h1 className="text-4xl font-mono font-semibold mb-2 text-gray-800">
         Reservations
       </h1>

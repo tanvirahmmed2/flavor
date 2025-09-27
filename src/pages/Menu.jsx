@@ -11,7 +11,7 @@ const Menu = () => {
     return (
         <div className='w-full flex flex-col items-center justify-center gap-4'>
             <h1 className='text-xl font-semibold text-center'>Grab Delicious Foods</h1>
-            <div className='w-full flex flex-col gap-2 p-6'>
+            <div className='w-full flex flex-col gap-2 '>
                 <button onClick={() => setMenuItem("Pizza")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Pizza" ? "bg-orange-500" : "bg-gray-300"}`} >Pizza</button>
                 <button onClick={() => setMenuItem("Burgers")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Burgers" ? "bg-orange-500" : "bg-gray-300"}`} >Burgers</button>
                 <button onClick={() => setMenuItem("Pasta")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Pasta" ? "bg-orange-500" : "bg-gray-300"}`} >Pasta</button>
@@ -20,7 +20,7 @@ const Menu = () => {
                 <button onClick={() => setMenuItem("Desserts")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Desserts" ? "bg-orange-500" : "bg-gray-300"}`} >Desserts</button>
             </div>
             <p className='text-2xl font-semibold text-center'>Select your most favourite {menuItem}</p>
-            <div className='w-full flex flex-wrap justify-center gap-4 md:gap-2 p-4'>
+            <div className='w-full flex flex-wrap justify-center gap-4 md:gap-2 '>
                 {
                     selectedItems.map((food) => {
                         const { name, id, image, new_price } = food

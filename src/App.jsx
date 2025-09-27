@@ -20,7 +20,7 @@ const App = () => {
       <div className='w-full '>
         <Navbar />
         <SideBar />
-        <div className='w-full min-h-[80vh] flex items-center justify-center my-20'>
+        <div className='w-full min-h-[80vh] flex items-center justify-center my-20 p-6'>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
