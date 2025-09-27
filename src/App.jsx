@@ -14,6 +14,9 @@ import Saved from './pages/Saved'
 import Review from './pages/Review'
 import Error from './pages/Error'
 import Order from './pages/Order'
+import About from './pages/About'
+import Login from './user/Login'
+import Register from './user/Register'
 
 const App = () => {
   return (
@@ -25,6 +28,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
+            <Route path='/about' element={<About/>} />
             <Route path='/cart' element={<Cart/>} />
             <Route path='saved' element={<Saved/>} />
             <Route path='/reserve' element={<Reserve/>} />
@@ -33,6 +37,8 @@ const App = () => {
             <Route path='/menu/:name' element={<Food/>} />
             <Route path='/review' element={<Review/>} />
             <Route path='/orders' element={<Order/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/register' element={<Register/>} />
             <Route path='/*' element={<Error/>} />
           </Routes>
         </div>

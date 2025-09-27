@@ -22,17 +22,17 @@ const SideBar = () => {
           <Link to='/menu' className='px-4 hover:scale-105 ' onClick={hideBar}>Menu</Link>
           <Link to='/cart' className='px-4 hover:scale-105 ' onClick={hideBar}>Cart</Link>
           <Link to='/reserve' className='px-4 hover:scale-105 'onClick={hideBar}>Reserve</Link>
-          <Link to='/contact' className='px-4 hover:scale-105 ' onClick={hideBar}>Contact</Link>
           <Link to='/gallery' className='px-4 hover:scale-105 ' onClick={hideBar}>Gallery</Link>
           <Link to='/about' className='px-4 hover:scale-105 ' onClick={hideBar}>About</Link>
           <Link to='/contact' className='px-4 hover:scale-105 ' onClick={hideBar}>Contact</Link>
           <Link to='/saved' className='px-4 hover:scale-105 ' onClick={hideBar}>Saved</Link>
           <Link to='/orders' className='px-4 hover:scale-105 ' onClick={hideBar}>Orders</Link>
           <Link to='/review' className='px-4 hover:scale-105 ' onClick={hideBar}>Review</Link>
+          <Link to='/login' className='px-4 hover:scale-105 ' onClick={hideBar}>Login</Link>
         </div>
 
       </div>
-
+      
       <p className={`${sidebar ? 'flex' : 'hidden'} text-3xl text-orange-400 cursor-pointer`} onClick={() => setSidebar(!sidebar)}><IoMdArrowDropleftCircle /></p>
 
     </div>
