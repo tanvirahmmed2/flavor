@@ -11,6 +11,7 @@ export const ContextProvider = ({ children }) => {
     const [savedItem, setSavedItem] = useState([])
     const [user, setUser]= useState(null)
     const [order, setOrder]= useState(null)
+    const [review, setReview]= useState(null)
     const [isLoggedIn, setIsLoggedIn]= useState(false)
 
 
@@ -104,6 +105,7 @@ export const ContextProvider = ({ children }) => {
         isLoggedIn, setIsLoggedIn,
         user, setUser,
         order, setOrder,
+        review, setReview,
     };
 
     return (
