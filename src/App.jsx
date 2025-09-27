@@ -13,6 +13,7 @@ import Contact from './pages/Contact'
 import Saved from './pages/Saved'
 import Review from './pages/Review'
 import Error from './pages/Error'
+import Order from './pages/Order'
 
 const App = () => {
   return (
@@ -24,13 +25,14 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/gallery' element={<Gallery/>} />
-            <Route path='/order' element={<Cart/>} />
+            <Route path='/cart' element={<Cart/>} />
             <Route path='saved' element={<Saved/>} />
             <Route path='/reserve' element={<Reserve/>} />
             <Route path='/contact' element={<Contact/>} />
             <Route path='/menu' element={<Menu/>} />
             <Route path='/menu/:name' element={<Food/>} />
             <Route path='/review' element={<Review/>} />
+            <Route path='/orders' element={<Order/>} />
             <Route path='/*' element={<Error/>} />
           </Routes>
         </div>
