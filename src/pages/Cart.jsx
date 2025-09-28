@@ -124,7 +124,7 @@ const Cart = () => {
             onClick={handleSubmit}
             className="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition w-full"
           >
-            Pay now!
+            Order now!
           </button>
         </div>
       }
