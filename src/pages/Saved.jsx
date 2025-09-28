@@ -5,7 +5,7 @@ const Saved = () => {
   const { savedItem, removeFromSave, addToCart } = useContext(ShopContext)
 
   return (
-    <div className="w-3/4 flex flex-col items-center gap-6 py-6">
+    <div className="w-3/4 flex flex-col items-center gap-6 py-6 text-[10px] md:text-base">
       <h1 className="text-2xl font-bold text-gray-800">Saved Items</h1>
 
       <div className="w-full grid grid-cols-4 text-center font-semibold bg-gray-100 p-3 rounded-lg">

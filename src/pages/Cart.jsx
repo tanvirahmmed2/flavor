@@ -28,7 +28,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="w-3/4 flex flex-col items-center gap-6 py-6">
+    <div className="w-3/4 flex flex-col items-center gap-6 py-6 text-xs md:text-base">
       <h1 className="text-2xl font-bold text-gray-800">Cart</h1>
 
       {/* Table Header */}
