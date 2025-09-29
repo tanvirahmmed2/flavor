@@ -49,9 +49,9 @@ const Login = () => {
     <div className='w-full flex items-center justify-center'>
       <section className='w-full lg:w-1/2 h-auto flex flex-col md:flex-row items-center justify-center gap-4'>
         <div className='w-full flex flex-col text-center items-center justify-center p-4'>
-          <h1 className='text-2xl font-semibold'>Welcome to Admin Page</h1>
-          <p>Sign in & run your business faster, secured and premium</p>
-          <Link to='/signup' className='text-orange-500 italic'>New worker!</Link>
+          <h1 className='text-2xl font-semibold'>Welcome to Flavor</h1>
+          <p>Sign up & enjoy our meals with even more taste and love</p>
+          <Link to='/register' className='text-orange-500 italic'>New user!</Link>
         </div>
 
         <form
