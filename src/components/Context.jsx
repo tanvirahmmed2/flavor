@@ -14,6 +14,7 @@ export const ContextProvider = ({ children }) => {
     const [order, setOrder] = useState(null)
     const [review, setReview] = useState(null)
     const [loader, setLoader] = useState(true)
+    console.log(loader)
 
     useEffect(() => {
         const fetchProtection = async () => {
@@ -29,7 +30,7 @@ export const ContextProvider = ({ children }) => {
                 }
             } catch (error) {
 
-                setLoader(false)
+                setLoader(true)
                 console.log('failed to fetch protected router' + error)
             }
         }

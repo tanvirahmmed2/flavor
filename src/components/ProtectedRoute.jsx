@@ -3,17 +3,17 @@ import { Navigate } from 'react-router-dom'
 import { ShopContext } from './Context'
 
 const ProtectedRoute = ({ children }) => {
-  const { user, loader } = useContext(ShopContext)
+    const {  loader } = useContext(ShopContext)
 
-  if (loader) {
-      if (!user) {
-    return <Navigate to="/login" replace />
-  }// or spinner
-  }
+    if (loader) {
+        
+            return <Navigate to="/login" replace />
+        }// or spinner
+    
 
- 
 
-  return children
+
+    return children
 }
 
 export default ProtectedRoute

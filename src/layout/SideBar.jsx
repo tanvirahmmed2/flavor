@@ -72,7 +72,7 @@ const SideBar = () => {
       </div>
 
       <div className='w-auto flex flex-col gap-3'>
-        <button onClick={handleLogout}>Log out</button>
+        {!loader && <button onClick={handleLogout}>Log out</button>}
         <p className={`${sidebar ? 'flex' : 'hidden'} text-3xl text-orange-400 cursor-pointer`} onClick={() => setSidebar(!sidebar)}><IoMdArrowDropleftCircle /></p>
 
       </div>
