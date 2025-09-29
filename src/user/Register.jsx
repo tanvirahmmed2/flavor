@@ -54,7 +54,9 @@ const Register = () => {
       <section className='w-full lg:w-1/2 h-auto flex flex-col md:flex-row items-center justify-center gap-4'>
         <div className='w-full flex flex-col items-center justify-center p-4 text-center'>
           <h1 className='text-2xl font-semibold'>Welcome to Flavor</h1>
+          
           <p>Sign up & enjoy our meals with even more taste and love</p>
+          <p>Trust me this is going to be memorable</p>
           <Link to='/login' className='text-orange-500 italic'>Already user!</Link>
 
 

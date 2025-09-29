@@ -49,7 +49,7 @@ const Login = () => {
       <section className='w-full lg:w-1/2 h-auto flex flex-col md:flex-row items-center justify-center gap-4'>
         <div className='w-full flex flex-col text-center items-center justify-center p-4'>
           <h1 className='text-2xl font-semibold'>Welcome to Flavor</h1>
-          <p>Sign up & enjoy our meals with even more taste and love</p>
+          <p>Sign in & enjoy our meals with even more taste and love</p>
           <Link to='/register' className='text-orange-500 italic'>New user!</Link>
         </div>
 
