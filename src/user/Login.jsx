@@ -4,7 +4,7 @@ import { ShopContext } from '../components/Context'
 
 const Login = () => {
   const navigate = useNavigate()
-  const { setUser, setIsLoggedIn } = useContext(ShopContext)
+  const { setUser, setLoader } = useContext(ShopContext)
   const [problem, setProblem] = useState('')
   const [loginuser, setLogInUser] = useState({ email: '', password: '' })
 
@@ -28,9 +28,8 @@ const Login = () => {
       const data = await res.json()
 
       if (data.success) {
-        // ✅ Update context
         setUser(data.user)
-        setIsLoggedIn(true)
+        setLoader(false)
 
         // Clear form
         setLogInUser({ email: '', password: '' })

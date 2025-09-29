@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { foods } from "../data/food";
+import { useEffect } from "react";
 
 
 export const ShopContext = createContext()
@@ -9,11 +10,31 @@ export const ContextProvider = ({ children }) => {
     const [foodItems, setFoodItems] = useState(foods);
     const [cartItem, setCartItem] = useState([]);
     const [savedItem, setSavedItem] = useState([])
-    const [user, setUser]= useState(null)
-    const [order, setOrder]= useState(null)
-    const [review, setReview]= useState(null)
-    const [loader, setLoader]= useState(false)
+    const [user, setUser] = useState(null)
+    const [order, setOrder] = useState(null)
+    const [review, setReview] = useState(null)
+    const [loader, setLoader] = useState(true)
 
+    useEffect(() => {
+        const fetchProtection = async () => {
+            try {
+                const res = await fetch('http://localhost:5000/user/protecteduser', {
+                    method: 'GET',
+                    credentials: 'include'
+                })
+                const data = await res.json()
+                if (data.success) {
+                    setUser(data)
+                    setLoader(false)
+                }
+            } catch (error) {
+
+                setLoader(false)
+                console.log('failed to fetch protected router' + error)
+            }
+        }
+        fetchProtection()
+    }, [])
 
 
     const addToCart = (id) => {
@@ -89,8 +110,6 @@ export const ContextProvider = ({ children }) => {
                 .filter((item) => item.quantity > 0)
         );
     };
-
-
 
 
 
