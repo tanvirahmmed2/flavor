@@ -47,6 +47,7 @@ const Cart = () => {
       if (data.success) {
         setOrder({
           userId: user?._id || '',
+          email: user?.email || '',
           name: user?.name || 'Guest',
           details: cartItem,
           deliverymethod: 'dinein',
