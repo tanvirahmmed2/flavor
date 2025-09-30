@@ -25,7 +25,7 @@ export const ContextProvider = ({ children }) => {
                 })
                 const data = await res.json()
                 if (data.success) {
-                    setUser(data)
+                    setUser(data.user)
                     setLoader(false)
                 }
             } catch (error) {
@@ -37,7 +37,7 @@ export const ContextProvider = ({ children }) => {
         fetchProtection()
     }, [])
 
-
+    
     const addToCart = (id) => {
         const numericId = Number(id);
         setCartItem((prev) => {
