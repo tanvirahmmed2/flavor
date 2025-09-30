@@ -18,6 +18,7 @@ import About from './pages/About'
 import Login from './user/Login'
 import Register from './user/Register'
 import ProtectedRoute from './components/ProtectedRoute'
+import Profile from './pages/Profile'
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
             <Route path='/menu/:name' element={<ProtectedRoute><Food/></ProtectedRoute>} />
             <Route path='/review' element={<ProtectedRoute><Review/></ProtectedRoute>} />
             <Route path='/orders' element={<ProtectedRoute><Order/></ProtectedRoute>} />
+            <Route path='/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>} />
             <Route path='/login' element={<Login/>} />
             <Route path='/register' element={<Register/>} />
             <Route path='/*' element={<Error/>} />

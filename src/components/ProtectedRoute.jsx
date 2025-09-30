@@ -16,7 +16,7 @@ const ProtectedRoute = ({ children }) => {
     }, [])
 
     if (checking) {
-        return <div className="text-center p-4">Checking login...</div> // spinner/loader
+        return <div className="text-center p-4">Checking login...</div> 
     }
 
     if (!user) {

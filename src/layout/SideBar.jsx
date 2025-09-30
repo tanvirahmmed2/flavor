@@ -60,6 +60,7 @@ const SideBar = () => {
           <Link to='/saved' className='px-4 hover:scale-105 ' onClick={hideBar}>Saved</Link>
           <Link to='/orders' className='px-4 hover:scale-105 ' onClick={hideBar}>Orders</Link>
           <Link to='/review' className='px-4 hover:scale-105 ' onClick={hideBar}>Review</Link>
+          <Link to='/profile' className='px-4 hover:scale-105 ' onClick={hideBar}>Profile</Link>
         </>
           :
           < >
