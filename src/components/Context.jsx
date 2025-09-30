@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { foods } from "../data/food";
 import { useEffect } from "react";
 
 
@@ -7,7 +6,7 @@ export const ShopContext = createContext()
 
 export const ContextProvider = ({ children }) => {
     const [sidebar, setSidebar] = useState(false);
-    const [foodItems, setFoodItems] = useState(foods);
+    const [foodItems, setFoodItems] = useState([]);
     const [cartItem, setCartItem] = useState([]);
     const [savedItem, setSavedItem] = useState([])
     const [user, setUser] = useState(null)
@@ -37,20 +36,38 @@ export const ContextProvider = ({ children }) => {
         fetchProtection()
     }, [])
 
-    
+    useEffect(()=>{
+        const fetchProduct=async()=>{
+            try {
+                const res= await fetch('http://localhost:5000/product',{
+                    method: "GET",
+                    credentials: "include",
+                    
+                })
+                const data= await res.json()
+                if(data.success){
+                    setFoodItems(data.product)
+                }
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchProduct()
+    },[])
+
+
     const addToCart = (id) => {
-        const numericId = Number(id);
         setCartItem((prev) => {
-            const existItem = prev.find((data) => data.id === numericId);
+            const existItem = prev.find((data) => data._id === id);
 
             if (existItem) {
                 return prev.map((item) =>
-                    item.id === numericId
+                    item._id === id
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
                 );
             } else {
-                const selectedItem = foodItems.find((item) => item.id === numericId);
+                const selectedItem = foodItems.find((item) => item._id === id);
                 if (selectedItem) {
                     return [...prev, { ...selectedItem, quantity: 1 }];
                 }
@@ -63,7 +80,7 @@ export const ContextProvider = ({ children }) => {
         setCartItem((prev) =>
             prev
                 .map((item) =>
-                    item.id === Number(id)
+                    item._id === id
                         ? { ...item, quantity: item.quantity - 1 }
                         : item
                 )
@@ -84,14 +101,13 @@ export const ContextProvider = ({ children }) => {
 
 
     const addToSave = (id) => {
-        const numericId = Number(id);
         setSavedItem((prev) => {
-            const existItem = prev.find((data) => data.id === numericId);
+            const existItem = prev.find((data) => data._id === id);
 
             if (existItem) {
                 alert('Item already saved')
             } else {
-                const selectedItem = foodItems.find((item) => item.id === numericId);
+                const selectedItem = foodItems.find((item) => item._id === id);
                 if (selectedItem) {
                     return [...prev, { ...selectedItem, quantity: 1 }];
                 }

@@ -46,10 +46,10 @@ const Food = () => {
         
 
         <div className="flex gap-4 mt-2">
-          <button className="px-4 py-2 border border-blue-300 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition" onClick={() => addToSave(food.id)}>
+          <button className="px-4 py-2 border border-blue-300 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition" onClick={() => addToSave(food._id)}>
             Save
           </button>
-          <button className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md shadow-md transition" onClick={() => addToCart(food.id)}>
+          <button className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md shadow-md transition" onClick={() => addToCart(food._id)}>
             Add to cart
           </button>
         </div>

@@ -45,10 +45,10 @@ const Cart = () => {
       ) : (
         <div className="w-full">
           {cartItem.map((item) => {
-            const { name, new_price, quantity, id } = item
+            const { name, new_price, quantity, _id } = item
             return (
               <div
-                key={id}
+                key={_id}
                 className="w-full grid grid-cols-4 text-center items-center border-b border-gray-200 py-3 hover:bg-gray-50 transition"
               >
                 <h1 className="font-medium">{name}</h1>
@@ -57,7 +57,7 @@ const Cart = () => {
                   ${new_price * quantity}
                 </p>
                 <p
-                  onClick={() => removeFromCart(id)}
+                  onClick={() => removeFromCart(_id)}
                   className="text-red-500 cursor-pointer hover:text-red-700"
                 >
                   Remove

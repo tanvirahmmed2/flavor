@@ -3,21 +3,20 @@ import { Link } from 'react-router-dom'
 import { ShopContext } from '../components/Context'
 
 const Menu = () => {
-    const [menuItem, setMenuItem] = useState("Pizza")
+    const [menuItem, setMenuItem] = useState("pizza")
     const { foodItems } = useContext(ShopContext)
-
     const selectedItems = foodItems.filter((food) => food.category === menuItem)
 
     return (
         <div className='w-full flex flex-col items-center justify-center gap-4'>
             <h1 className='text-xl font-semibold text-center'>Grab Delicious Foods</h1>
             <div className='w-full flex flex-col gap-2 '>
-                <button onClick={() => setMenuItem("Pizza")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Pizza" ? "bg-orange-500" : "bg-gray-300"}`} >Pizza</button>
-                <button onClick={() => setMenuItem("Burgers")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Burgers" ? "bg-orange-500" : "bg-gray-300"}`} >Burgers</button>
-                <button onClick={() => setMenuItem("Pasta")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Pasta" ? "bg-orange-500" : "bg-gray-300"}`} >Pasta</button>
-                <button onClick={() => setMenuItem("Salads")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Salads" ? "bg-orange-500" : "bg-gray-300"}`} >Salads</button>
-                <button onClick={() => setMenuItem("Drinks")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Drinks" ? "bg-orange-500" : "bg-gray-300"}`} >Drinks</button>
-                <button onClick={() => setMenuItem("Desserts")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "Desserts" ? "bg-orange-500" : "bg-gray-300"}`} >Desserts</button>
+                <button onClick={() => setMenuItem("pizza")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "pizza" ? "bg-orange-500" : "bg-gray-300"}`} >Pizza</button>
+                <button onClick={() => setMenuItem("burger")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "burger" ? "bg-orange-500" : "bg-gray-300"}`} >Burgers</button>
+                <button onClick={() => setMenuItem("pasta")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "pasta" ? "bg-orange-500" : "bg-gray-300"}`} >Pasta</button>
+                <button onClick={() => setMenuItem("salad")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "salad" ? "bg-orange-500" : "bg-gray-300"}`} >Salads</button>
+                <button onClick={() => setMenuItem("drinks")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "drinks" ? "bg-orange-500" : "bg-gray-300"}`} >Drinks</button>
+                <button onClick={() => setMenuItem("dessert")} className={`px-0 md:px-4 w-auto text-white rounded-md py-3 ${menuItem === "dessert" ? "bg-orange-500" : "bg-gray-300"}`} >Desserts</button>
             </div>
             <p className='text-2xl font-semibold text-center'>Select your most favourite {menuItem}</p>
             <div className='w-full flex flex-wrap justify-center gap-4 md:gap-2 '>
