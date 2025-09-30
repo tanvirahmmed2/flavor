@@ -3,18 +3,22 @@ import { ShopContext } from '../components/Context'
 
 const Cart = () => {
   const { cartItem, removeFromCart, getTotalAmount, user } = useContext(ShopContext)
+
+  const [problem, setProblem] = useState('')
+
   const [order, setOrder] = useState({
-    name: user ? user.name : 'Guest',
+    userId: user?._id || '',
+    name: user?.name || 'Guest',
+    details: cartItem,
     deliverymethod: 'dinein',
     paymethod: 'bkash',
     totalAmount: 0,
-    phone: user ? user.phone : '',
+    phone: user?.phone || '',
     address: '',
   })
 
-  // Update totalAmount whenever cart changes
   useEffect(() => {
-    setOrder((prev) => ({ ...prev, totalAmount: getTotalAmount() }))
+    setOrder((prev) => ({ ...prev, totalAmount: getTotalAmount(), details: cartItem }))
   }, [cartItem, getTotalAmount])
 
   const handleChange = (e) => {
@@ -22,16 +26,45 @@ const Cart = () => {
     setOrder((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = () => {
-    console.log('Order placed:', order)
-    // here you can call backend API (POST /order)
+  const handleSubmit = async () => {
+    if (!order.userId || !order.details.length || !order.phone) {
+      setProblem("Please login and add items to cart first")
+      return
+    }
+
+    try {
+      const res = await fetch('http://localhost:5000/order/ordernow', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          Accept: 'application/json', // fixed typo here
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(order)
+      })
+      const data = await res.json()
+      setProblem(data.message)
+      if (data.success) {
+        setOrder({
+          userId: user?._id || '',
+          name: user?.name || 'Guest',
+          details: cartItem,
+          deliverymethod: 'dinein',
+          paymethod: 'bkash',
+          totalAmount: 0,
+          phone: user?.phone || '',
+          address: '',
+        })
+      }
+    } catch (error) {
+      setProblem(error.message + ' failed to submit order')
+    }
   }
 
   return (
     <div className="w-3/4 flex flex-col items-center gap-6 py-6 text-xs md:text-base">
       <h1 className="text-2xl font-bold text-gray-800">Cart</h1>
 
-      {/* Table Header */}
       <div className="w-full grid grid-cols-4 text-center font-semibold bg-gray-100 p-3 rounded-lg">
         <h1>Name</h1>
         <p>Quantity</p>
@@ -39,7 +72,6 @@ const Cart = () => {
         <p>Remove</p>
       </div>
 
-      {/* Cart Items */}
       {!cartItem || cartItem.length === 0 ? (
         <p className="text-gray-500 italic">Cart data not found</p>
       ) : (
@@ -53,9 +85,7 @@ const Cart = () => {
               >
                 <h1 className="font-medium">{name}</h1>
                 <p>{quantity}</p>
-                <p className="text-green-600 font-semibold">
-                  ${new_price * quantity}
-                </p>
+                <p className="text-green-600 font-semibold">${new_price * quantity}</p>
                 <p
                   onClick={() => removeFromCart(_id)}
                   className="text-red-500 cursor-pointer hover:text-red-700"
@@ -68,15 +98,11 @@ const Cart = () => {
         </div>
       )}
 
-      {/* Order Summary */}
-      {
-        cartItem.length===0 ? <></> : <div className="flex flex-col items-start gap-3 mt-4 bg-gray-50 p-6 rounded-md w-full max-w-md">
+      {cartItem.length > 0 && (
+        <div className="flex flex-col items-start gap-3 mt-4 bg-gray-50 p-6 rounded-md w-full max-w-md">
           <p>Name: {order.name}</p>
-          <p>
-            Total amount: <span className="text-green-600">${order.totalAmount}</span>
-          </p>
+          <p>Total amount: <span className="text-green-600">${order.totalAmount}</span></p>
 
-          {/* Delivery Method */}
           <select
             name="deliverymethod"
             value={order.deliverymethod}
@@ -85,10 +111,8 @@ const Cart = () => {
           >
             <option value="dinein">Dine in</option>
             <option value="homedelivery">Home delivery</option>
-
           </select>
 
-          {/* Payment Method */}
           <select
             name="paymethod"
             value={order.paymethod}
@@ -100,17 +124,16 @@ const Cart = () => {
             <option value="card">Card</option>
           </select>
 
-          {/* Phone Input */}
-          {
-            order.deliverymethod === 'homedelivery' ? <input
+          {order.deliverymethod === 'homedelivery' && (
+            <input
               type="text"
               name="address"
               value={order.address}
               placeholder="Your address"
               onChange={handleChange}
               className="w-full border rounded-md p-2"
-            /> : <></>
-          }
+            />
+          )}
           <input
             type="text"
             name="phone"
@@ -126,8 +149,9 @@ const Cart = () => {
           >
             Order now!
           </button>
+          <p>{problem}</p>
         </div>
-      }
+      )}
     </div>
   )
 }
