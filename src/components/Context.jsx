@@ -120,7 +120,7 @@ export const ContextProvider = ({ children }) => {
         setSavedItem((prev) =>
             prev
                 .map((item) =>
-                    item.id === Number(id)
+                    item._id === id
                         ? { ...item, quantity: item.quantity - 1 }
                         : item
                 )

@@ -20,22 +20,22 @@ const Saved = () => {
       ) : (
         <div className="w-full">
           {savedItem.map((item) => {
-            const { name, new_price, id } = item
+            const { name, new_price, _id } = item
             return (
               <div
-                key={id}
+                key={_id}
                 className="w-full grid grid-cols-4 text-center items-center border-b border-gray-200 py-3 hover:bg-gray-50 transition"
               >
                 <h1 className="font-medium">{name}</h1>
                 <p className="text-green-600 font-semibold">${new_price}</p>
                 <p
-                  onClick={() => addToCart(id)}
+                  onClick={() => addToCart(_id)}
                   className="text-blue-500 cursor-pointer hover:text-blue-700"
                 >
                   Click here
                 </p>
                 <p
-                  onClick={() => removeFromSave(id)}
+                  onClick={() => removeFromSave(_id)}
                   className="text-red-500 cursor-pointer hover:text-red-700"
                 >
                   Remove
