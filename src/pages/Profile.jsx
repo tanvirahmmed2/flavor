@@ -8,7 +8,7 @@ const Profile = () => {
     const { user } = useContext(ShopContext)
     console.log(user)
     return (
-        <section className='w-full flex flex-col items-center justify-center gap-6 py-10 bg-gray-50'>
+        <section className='w-full flex flex-col items-center justify-center gap-6 py-10 '>
             <p className='text-8xl text-orange-400'><CiUser /></p>
             <div className='flex flex-col items-start gap-6 bg-white shadow-md rounded-xl p-6 w-80'>
                 <div>

@@ -8,6 +8,7 @@ const Cart = () => {
 
   const [order, setOrder] = useState({
     userId: user?._id || '',
+    email: user?.email || '',
     name: user?.name || 'Guest',
     details: cartItem,
     deliverymethod: 'dinein',
