@@ -34,7 +34,7 @@ const Cart = () => {
     }
 
     try {
-      const res = await fetch('http://localhost:5000/order/ordernow', {
+      const res = await fetch('https://flavor-server.onrender.com/order/ordernow', {
         method: 'POST',
         credentials: 'include',
         headers: {

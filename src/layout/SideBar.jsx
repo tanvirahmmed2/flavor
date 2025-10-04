@@ -15,7 +15,7 @@ const SideBar = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch('http://localhost:5000/user/signout', {
+      const res = await fetch('https://flavor-server.onrender.com/user/signout', {
         method: 'POST',
         credentials: 'include',
         headers: {

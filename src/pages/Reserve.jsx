@@ -31,7 +31,7 @@ const Reserve = () => {
 
     try {
 
-      const res = await fetch("http://localhost:5000/reserve/book", {
+      const res = await fetch("https://flavor-server.onrender.com/reserve/book", {
         method: "POST",
         credentials: "include",
         headers: {

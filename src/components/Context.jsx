@@ -18,7 +18,7 @@ export const ContextProvider = ({ children }) => {
     useEffect(() => {
         const fetchProtection = async () => {
             try {
-                const res = await fetch('http://localhost:5000/user/protecteduser', {
+                const res = await fetch('https://flavor-server.onrender.com/user/protecteduser', {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -39,7 +39,7 @@ export const ContextProvider = ({ children }) => {
     useEffect(()=>{
         const fetchProduct=async()=>{
             try {
-                const res= await fetch('http://localhost:5000/product',{
+                const res= await fetch('https://flavor-server.onrender.com/product',{
                     method: "GET",
                     credentials: "include",
                     
