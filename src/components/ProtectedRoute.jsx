@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom'
 import { ShopContext } from './Context'
 
 const ProtectedRoute = ({ children }) => {
-    const { user } = useContext(ShopContext) // assume you store user in context
+    const { user } = useContext(ShopContext) 
     const [checking, setChecking] = useState(true)
 
     useEffect(() => {
