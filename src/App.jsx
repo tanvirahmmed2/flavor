@@ -28,21 +28,21 @@ const App = () => {
         <SideBar />
         <div className='w-full min-h-[80vh] flex items-center justify-center my-20 p-6'>
           <Routes>
-            <Route path='/' element={<ProtectedRoute><Home /></ProtectedRoute> } />
-            <Route path='/gallery' element={<ProtectedRoute><Gallery/></ProtectedRoute>} />
-            <Route path='/about' element={<ProtectedRoute><About/></ProtectedRoute>} />
-            <Route path='/cart' element={<ProtectedRoute><Cart/></ProtectedRoute>} />
-            <Route path='saved' element={<ProtectedRoute><Saved/></ProtectedRoute>} />
-            <Route path='/reserve' element={<ProtectedRoute><Reserve/></ProtectedRoute>} />
-            <Route path='/contact' element={<ProtectedRoute><Contact/></ProtectedRoute>} />
-            <Route path='/menu' element={<ProtectedRoute><Menu/></ProtectedRoute>} />
-            <Route path='/menu/:name' element={<ProtectedRoute><Food/></ProtectedRoute>} />
-            <Route path='/review' element={<ProtectedRoute><Review/></ProtectedRoute>} />
-            <Route path='/orders' element={<ProtectedRoute><Order/></ProtectedRoute>} />
-            <Route path='/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>} />
-            <Route path='/login' element={<Login/>} />
-            <Route path='/register' element={<Register/>} />
-            <Route path='/*' element={<Error/>} />
+            <Route path='/' element={<Home />} />
+            <Route path='/gallery' element={<Gallery />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/cart' element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+            <Route path='saved' element={<Saved />} />
+            <Route path='/reserve' element={<Reserve />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/menu' element={<Menu />} />
+            <Route path='/menu/:name' element={<Food />} />
+            <Route path='/review' element={<Review />} />
+            <Route path='/orders' element={<Order />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/*' element={<Error />} />
           </Routes>
         </div>
         <Footer />
